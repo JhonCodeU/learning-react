@@ -1,35 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import './index.css';
+import FormLogin from './components/FormLogin';
+import CountClass from './components/CountClass';
+/* import FuncionalCounter from './components/FuncionalCounter'; */
+import './css/index.css';
 
 // components
 import User from './components/User';
 
-let session = true;
-
-const closeSession = () => {
-  console.log('Closing session...');
-  session = false;
-  root.render(<App />);
-}
-
 const App = () => {
+
+  const [session, changeStatusSession] = useState(true);
+
   return (
-    <>
-      {
-        session ?
-          <div>
-            <User />
-            <button onClick={closeSession}>Logout</button>
-          </div>
-          :
-          <div>
-            <h4>Session is not active</h4>
-            <button>Login</button>
-          </div>
-      }
-    </>
+    <div className='container'>
+      <>
+        {
+          session ?
+            <div>
+              <User />
+              <CountClass amountIncrement={10} amountDecrement={5} />
+              {/* <FuncionalCounter increment={10} decrement={5} /> */}
+              <button className='buttom' Click={() => changeStatusSession(false)}>Logout</button>
+            </div>
+            :
+            <div>
+              <h1>Session is not active</h1>
+              <FormLogin changeStatusSession={changeStatusSession} />
+              {/*  <button onClick={() => changeStatusSession(true)}>Login</button> */}
+            </div>
+        }
+      </>
+    </div>
   );
 }
 
