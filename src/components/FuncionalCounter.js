@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import '../css/counter.css';
+//import style from '../css/counter.css';
+import Button from '../elements/Boton';
 
 const FuncionalCounter = ({ increment, decrement }) => {
 
@@ -16,8 +17,8 @@ const FuncionalCounter = ({ increment, decrement }) => {
   return (
     <div>
       <h1>{count}</h1>
-      <button className='boton-counter' onClick={handleDecrement}>Subtract</button>
-      <button className='boton-counter' onClick={handleIncrement}>Add</button>
+      <Button className='boton-counter' onClick={handleDecrement}>Subtract</Button>
+      <Button className='boton-counter' onClick={handleIncrement}>Add</Button>
     </div>
   );
 };

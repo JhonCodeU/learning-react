@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import '../css/counter.css';
+// import styles from '../css/counter.module.css';
+import Button from '../elements/Boton';
 
 class CountClass extends Component {
   constructor(props) {
@@ -27,8 +28,10 @@ class CountClass extends Component {
     return (
       <div>
         <h1>{this.state.count}</h1>
-        <button className='boton-counter' onClick={() => this.setState({ count: this.state.count + this.props.amountIncrement })}>Add</button>
-        <button className='boton-counter' onClick={() => this.setState({ count: this.state.count - this.props.amountDecrement })}>Subtract</button>
+        {/* <button className={styles.boton} onClick={() => this.setState({ count: this.state.count + this.props.amountIncrement })}>Add</button>
+        <button className={styles.boton} onClick={() => this.setState({ count: this.state.count - this.props.amountDecrement })}>Subtract</button> */}
+        <Button onClick={() => this.setState({ count: this.state.count + this.props.amountIncrement })}>Add</Button>
+        <Button onClick={() => this.setState({ count: this.state.count - this.props.amountDecrement })}>Subtract</Button>
       </div>
     );
   }

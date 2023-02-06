@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import '../css/form.css';
+import styles from '../css/form.module.css';
+import Button from '../elements/Boton';
 
 const FormLogin = (props) => {
 
@@ -27,11 +28,11 @@ const FormLogin = (props) => {
   }
 
   return (
-    <form action='' className='form' onSubmit={onSubmit}>
+    <form action='' className={styles.form} onSubmit={onSubmit}>
       <div>
-        <label className='label' htmlFor="user">User:</label>
+        <label className={styles.label} htmlFor="user">User:</label>
         <input
-          className='input'
+          className={styles.input}
           type="text"
           name="user"
           id="user"
@@ -40,9 +41,9 @@ const FormLogin = (props) => {
         />
       </div>
       <div>
-        <label className='label' htmlFor="password">Password:</label>
+        <label className={styles.label} htmlFor="password">Password:</label>
         <input
-          className='input'
+          className={styles.input}
           type="password"
           name="password"
           id="password"
@@ -50,7 +51,9 @@ const FormLogin = (props) => {
           onChange={onChange}
         />
       </div>
-      <button className='boton' type="submit">Login</button>
+      <div>
+        <Button large className={styles.boton} type="submit">Login</Button>
+      </div>
     </form>
   );
 }

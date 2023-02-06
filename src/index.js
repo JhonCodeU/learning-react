@@ -5,6 +5,7 @@ import FormLogin from './components/FormLogin';
 import CountClass from './components/CountClass';
 /* import FuncionalCounter from './components/FuncionalCounter'; */
 import './css/index.css';
+import Button from './elements/Boton';
 
 // components
 import User from './components/User';
@@ -22,7 +23,7 @@ const App = () => {
               <User />
               <CountClass amountIncrement={10} amountDecrement={5} />
               {/* <FuncionalCounter increment={10} decrement={5} /> */}
-              <button className='buttom' Click={() => changeStatusSession(false)}>Logout</button>
+              <Button black large marginTop onClick={() => changeStatusSession(false)}>Logout</Button>
             </div>
             :
             <div>
