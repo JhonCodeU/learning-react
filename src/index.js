@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import FormLogin from './components/FormLogin';
-import CountClass from './components/CountClass';
-/* import FuncionalCounter from './components/FuncionalCounter'; */
+//import CountClass from './components/CountClass';
+//import FuncionalCounter from './components/FuncionalCounter';
 import './css/index.css';
 import Button from './elements/Boton';
+import ExampleUseReducer from './components/ExampleUseReducer';
 
 // components
 import User from './components/User';
@@ -21,7 +22,8 @@ const App = () => {
           session ?
             <div>
               <User />
-              <CountClass amountIncrement={10} amountDecrement={5} />
+              {/* <CountClass amountIncrement={10} amountDecrement={5} /> */}
+              <ExampleUseReducer />
               {/* <FuncionalCounter increment={10} decrement={5} /> */}
               <Button black large marginTop onClick={() => changeStatusSession(false)}>Logout</Button>
             </div>
