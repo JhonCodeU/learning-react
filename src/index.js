@@ -7,6 +7,7 @@ import FormLogin from './components/FormLogin';
 import './css/index.css';
 import Button from './elements/Boton';
 import ExampleUseReducer from './components/ExampleUseReducer';
+import Blog from './components/Blog';
 
 // components
 import User from './components/User';
@@ -22,6 +23,7 @@ const App = () => {
           session ?
             <div>
               <User />
+              <Blog />
               {/* <CountClass amountIncrement={10} amountDecrement={5} /> */}
               <ExampleUseReducer />
               {/* <FuncionalCounter increment={10} decrement={5} /> */}
